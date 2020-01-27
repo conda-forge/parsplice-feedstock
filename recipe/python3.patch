@@ -1,0 +1,81 @@
+fix python3 
+author: Jan Janssen (MPIE)
+
+---
+ node-affinity/mkhosts-slurm-nospawn.py | 9 +-
+ node-affinity/mkhosts-slurm.py | 9 +-
+ 2 file changed, 10 insertion(+), 8 deletion(-)
+
+diff --git a/node-affinity/mkhosts-slurm-nospawn.py b/node-affinity/mkhosts-slurm-nospawn.py
+index 2e6ad9a..25556d0 100644
+--- a/node-affinity/mkhosts-slurm-nospawn.py
++++ b/node-affinity/mkhosts-slurm-nospawn.py
+@@ -1,3 +1,4 @@
++from __future__ import print_function
+ import sys
+ import string
+ import glob
+@@ -50,7 +51,7 @@
+   os.remove(h)
+ 
+ if len(sys.argv) <5:
+-    print "mkhosts: nSlotsPerNode nMPISlotsPerWorker nSlotsPerWorker nWorkManagers"
++    print("mkhosts: nSlotsPerNode nMPISlotsPerWorker nSlotsPerWorker nWorkManagers")
+     sys.exit()
+ 
+ nSlotsPerNode=int(sys.argv[1])
+@@ -64,8 +65,8 @@
+ 
+ slurm_nodelist = os.getenv('SLURM_NODELIST', hostname)
+ 
+-print "HOSTNAME: ", hostname
+-print "NODE LIST: ", slurm_nodelist
++print("HOSTNAME: ", hostname)
++print("NODE LIST: ", slurm_nodelist)
+ 
+ 
+ sl= re.split('\]|\[',slurm_nodelist)
+@@ -90,7 +91,7 @@
+     nodes.append([slurm_nodelist,nSlotsPerNode])
+ 
+ nNodes=len(nodes)
+-print "NODES: ",nodes
++print("NODES: ",nodes)
+ 
+ 
+ hfile=open('hosts','w')
+---
+
+diff --git a/node-affinity/mkhosts-slurm.py b/node-affinity/mkhosts-slurm.py
+index 2e6ad9a..25556d0 100644
+--- a/node-affinity/mkhosts-slurm.py
++++ b/node-affinity/mkhosts-slurm.py
+@@ -1,3 +1,4 @@
++from __future__ import print_function
+ import sys
+ import string
+ import glob
+@@ -20,8 +21,8 @@
+ 
+ slurm_nodelist = os.getenv('SLURM_NODELIST', hostname)
+ 
+-print "HOSTNAME: ", hostname
+-print "NODE LIST: ", slurm_nodelist
++print("HOSTNAME: ", hostname)
++print("NODE LIST: ", slurm_nodelist)
+ 
+ 
+ sl= re.split('\]|\[',slurm_nodelist)
+@@ -49,10 +50,10 @@
+ 
+ nNodes=len(nodes)
+ if nNodes<nWM+2:
+-    print "INSUFFICIENT ALLOCATION"
++    print("INSUFFICIENT ALLOCATION")
+     sys.exit()
+ 
+-print "NODES: ",nodes
++print("NODES: ",nodes)
+ 
+ hfile=open('hosts','w')
+ #Splicer
