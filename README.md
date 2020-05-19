@@ -56,6 +56,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_mpimpichpython3.8</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8939&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/parsplice-feedstock?branchName=master&jobName=linux&configuration=linux_mpimpichpython3.8" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_mpiopenmpipython2.7</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8939&branchName=master">
@@ -74,6 +81,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8939&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/parsplice-feedstock?branchName=master&jobName=linux&configuration=linux_mpiopenmpipython3.7" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_mpiopenmpipython3.8</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8939&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/parsplice-feedstock?branchName=master&jobName=linux&configuration=linux_mpiopenmpipython3.8" alt="variant">
                 </a>
               </td>
             </tr>
