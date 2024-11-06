@@ -1,7 +1,4 @@
 mpi:
-- mpich
-- openmpi
+  - mpich
+  - openmpi
 
-pin_run_as_build:
-  mpich: x.x
-  openmpi: x.x
